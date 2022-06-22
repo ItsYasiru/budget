@@ -1,0 +1,107 @@
+@import "./mixins/PaddedShadow"
+
+.NewPost
+    @include PaddedShadow
+
+    form
+        display: flex
+        flex-direction: column
+
+        @mixin common
+            padding: 10px 20px
+
+            font-size: 13px
+
+            border: 1px solid #5353532e
+            border-radius: 10px
+
+        input
+            @include common
+            margin: 10px 0
+            &[type="file"]
+                display: none
+        label
+            @include common
+            display: block
+            margin: 10px 0
+            text-align: center
+        textarea
+            @include common
+            resize: vertical
+
+.Post
+    @include PaddedShadow()
+
+    margin: 30px 0
+    overflow: hidden
+    border-radius: 10px
+    &:last-child
+        margin-bottom: 0
+
+    p
+        margin: 0
+    h2
+        margin: 0
+
+    .imageContainer
+        display: block
+        position: relative
+
+        width: max
+        height: 40vh
+        margin: 10px 0
+
+        overflow: hidden
+
+        img
+            transition: .2s
+            border-radius: 10px
+
+    .actionsRail
+        display: flex
+        margin: 15px 0
+
+        .left
+            margin-right: auto
+        .right
+            margin-left: auto
+
+        button
+            margin: 0 5px
+            padding: 7px 15px
+            border: none
+            border-radius: 10px
+
+            display: inline-flex
+            align-items: center
+
+            transition: .2s
+            &:hover
+                color: #FFFFFF
+                background: #1F1F1F
+            &:only-child
+                margin: 0
+            &:first-child
+                margin-left: 0
+            &:last-child
+                margin-right: 0
+
+            i
+                font-size: 16px
+                margin-right: 5px
+
+.PostsContainer
+    h1
+        @include PaddedShadow
+
+        margin: 30px 0
+        font-weight: 600
+
+.PostsPanel
+    width: calc(50% - 60px)
+    margin: 0 30px
+
+@media screen and (max-width: 940px)
+    .PostsPanel
+        width: 100%
+        margin: 0

@@ -1,0 +1,52 @@
+@import "./mixins/PaddedShadow"
+
+.ContactCard
+    margin: 10px 0
+    display: flex
+
+    transition: .2s
+    &:hover
+        margin: 20px 0
+        margin-left: 10px
+
+        transform: scale(1.05)
+    &:first-child
+        margin-top: 0
+    &:last-child
+        margin-bottom: 0
+
+    .details
+        display: flex
+        flex-direction: column
+        justify-content: center
+        a
+            display: flex
+            align-items: center
+            font-size: 14px
+            white-space: nowrap
+            i
+                font-size: 16px
+                margin-right: 10px
+
+    .avatarContainer
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin-right: 15px
+        img
+            border-radius: 50%
+
+.ContactsPanel
+    @include PaddedShadow
+
+    width: 25%
+    max-height: calc(100vh - 180px)
+    .inner
+        max-height: calc(100vh - 250px) // Nav bar height + padding
+        overflow-y: scroll
+        &::-webkit-scrollbar
+            display: none
+
+@media screen and (max-width: 940px)
+    .ContactsPanel
+        display: none

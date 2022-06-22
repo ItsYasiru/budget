@@ -1,0 +1,14 @@
+@mixin PaddedShadow()
+    padding: 10px 20px
+    box-shadow: 0 0 15px rgb(0 0 0 / 15%)
+    border-radius: 10px
+
+    transition: .2s
+    &:hover
+        box-shadow: 0 0 15px rgb(0 0 0 / 20%)
+
+    h1
+        margin: 10px 0
+        maring-bottom: 0 !important
+        white-space: nowrap
+        font-weight: 600

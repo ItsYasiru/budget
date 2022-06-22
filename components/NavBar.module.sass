@@ -1,0 +1,42 @@
+@import "./mixins/PaddedShadow"
+
+.LogoRail
+    i
+        margin: 7px
+        font-size: 18px
+
+.CurrentUser
+    padding: 0
+    max-width: 300px
+
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: flex-start
+    label
+        font-weight: 600
+        margin-right: 15px
+    img
+        border-radius: 50%
+
+.NavBar
+    @include PaddedShadow
+
+    width: max
+    height: 50px
+    margin: 30px 0
+
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: flex-start
+    .left
+        margin-right: auto
+    .right
+        margin-left: auto
+    .center
+        display: block
+
+@media screen and (max-width: 940px)
+    .NavBar .center
+        display: none

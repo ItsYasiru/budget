@@ -1,0 +1,51 @@
+@import "./mixins/PaddedShadow"
+
+.ExplorePost
+    margin: 15px 0
+
+    overflow: hidden
+    border-radius: 10px
+    &:only-child
+        margin: 0
+    &:first-child
+        margin-left: 0
+    &:last-child
+        margin-right: 0
+    &:hover
+        .imageContainer img
+            transform: scale(1.1)
+
+    label
+        position: relative
+
+        top: 15px
+        left: 10px
+        padding: 5px 10px
+        border-radius: 5px
+        white-space: nowrap
+
+        background: #ffffffd2
+
+    .imageContainer
+        display: block
+        position: relative
+
+        width: max
+        height: 200px
+        img
+            transition: .2s
+
+.ExplorePanel
+    @include PaddedShadow
+
+    width: 25%
+    max-height: calc(100vh - 180px)
+    .inner
+        max-height: calc(100vh - 250px)
+        overflow-y: scroll
+        &::-webkit-scrollbar
+            display: none
+
+@media screen and (max-width: 940px)
+    .ExplorePanel
+        display: none
