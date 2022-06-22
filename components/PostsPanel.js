@@ -65,7 +65,9 @@ function Post({ post }) {
 function PostsContainer({ posts }) {
     return (
         <div className={styles.PostsContainer}>
-            <h1 style={{ marginBottom: "15px" }}>My Posts</h1>
+            <div>
+                <h1>My Posts</h1>
+            </div>
             {posts.map((post, i) => (
                 <Post key={i} post={post} />
             ))}

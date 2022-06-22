@@ -12,7 +12,7 @@
 
             font-size: 13px
 
-            border: 1px solid #5353532e
+            border: 1px solid #0000002b
             border-radius: 10px
 
         input
@@ -78,7 +78,7 @@
             transition: .2s
             &:hover
                 color: #FFFFFF
-                background: #1F1F1F
+                background: #ffaa00
             &:only-child
                 margin: 0
             &:first-child
@@ -91,11 +91,14 @@
                 margin-right: 5px
 
 .PostsContainer
-    h1
+    div
         @include PaddedShadow
-
         margin: 30px 0
-        font-weight: 600
+        margin-bottom: 15px
+
+        h1
+            margin: 0
+            font-weight: 600
 
 .PostsPanel
     width: calc(50% - 60px)
