@@ -4,6 +4,7 @@ const nextConfig = {
     images: {
         domains: ["picsum.photos"],
     },
+    optimizeFonts: false,
 };
 
 module.exports = nextConfig;
